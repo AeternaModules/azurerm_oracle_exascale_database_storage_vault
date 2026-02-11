@@ -25,7 +25,7 @@ EOT
     zones                             = set(string)
     description                       = optional(string)
     tags                              = optional(map(string))
-    time_zone                         = optional(string, "UTC")
+    time_zone                         = optional(string) # Default: "UTC"
     high_capacity_database_storage = object({
       total_size_in_gb = number
     })
