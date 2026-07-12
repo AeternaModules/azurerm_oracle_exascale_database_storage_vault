@@ -1,3 +1,7 @@
+output "oracle_exascale_database_storage_vaults_id" {
+  description = "Map of id values across all oracle_exascale_database_storage_vaults, keyed the same as var.oracle_exascale_database_storage_vaults"
+  value       = { for k, v in azurerm_oracle_exascale_database_storage_vault.oracle_exascale_database_storage_vaults : k => v.id }
+}
 output "oracle_exascale_database_storage_vaults_additional_flash_cache_percentage" {
   description = "Map of additional_flash_cache_percentage values across all oracle_exascale_database_storage_vaults, keyed the same as var.oracle_exascale_database_storage_vaults"
   value       = { for k, v in azurerm_oracle_exascale_database_storage_vault.oracle_exascale_database_storage_vaults : k => v.additional_flash_cache_percentage }
